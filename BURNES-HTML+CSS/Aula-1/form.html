@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formuários em HTML5</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Formulário</h1>
+	<form method="get" name="form1"> 
+		<label for="email">Preencha com seu e-mail</label>
+		<input type="email" name="email" placeholder="Digite um email valido" size="60" max="50" required>
+
+		<br>
+
+		<label for="cpf">CPF</label>
+		<input type="text" name="cpf" placeholder="Digite seu CPF" size="20" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite no formato: 000.000.000-00" required>
+
+		<button type="submit">Enviar</button>
+		
+	</form>
+
+	<h1>Storage</h1>
+	<form name="form2">
+		<label for="valor">Valor: </label>
+		<input type="number" name="valor" id="valor">
+		<br>
+		<label for="nome">Nome: </label>
+		<input type="text" name="nome" id="nome">
+		<button type="button" onclick="gravar()">Gravar</button>
+		<button type="button" onclick="ler()">Verificar</button>
+	</form>
+
+	<p id="msg">Clique em Ler</p>
+	
+	<script type="text/javascript">
+		function gravar() {
+			var valor = document.getElementById("valor").value;
+			var nome  = document.getElementById("nome").value;
+
+			//Grava no storage
+			localStorage.setItem("valor", valor);
+			localStorage.setItem("nome", nome);
+
+			alert("O Valor "+valor + " e o Nome "+nome+", foram adicionados com sucesso!");
+		} function ler() {		
+			var valor = localStorage.getItem("valor");
+			var nome  = localStorage.getItem("nome");
+
+			//Mostrar na tela
+			document.getElementById("msg").innerHTML = "O valor é: "+ valor + " o nome é: "+nome;
+		}
+	</script>
+</body>
+</html>

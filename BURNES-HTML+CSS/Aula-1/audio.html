@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Audio HTML</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Audio em HTML</h1>
+	<audio controls>
+		<source src="downloads/acdc.mp3" type="audio/mp3">
+		<p>Seu navegador não suporta audio</p>
+	</audio>
+
+	<h1>Audio com controle</h1>
+	<audio id="audio1">
+		<source src="downloads/acdc.mp3" type="audio/mp3">
+		<p>Seu navegador não suporta audio</p>
+	</audio>
+
+	<input type="range" id="barra" value="0" onchange="mudarAudio()">
+
+	<button type="button" id="tocar" onclick="playPause()"> Play/Pause </button>
+
+	<script type="text/javascript">
+		var audio = document.getElementById("audio1");
+		var barra = document.getElementById("barra");
+
+		function playPause(){
+			//Verificar se o video esta pausado
+			if (audio.paused) {
+				//Tocar audio
+				audio.play();
+			} else {
+				//Pausar audio
+				audio.pause();
+			}
+		}
+
+		function mudarAudio(){
+			//Calcular o tempo
+			var tempo = audio.duration * (barra.value / 100);
+
+			//Adicionar o valor a o  audio
+			audio.currentTime = tempo;
+
+		}audio.addEventListener("timeupdate", function(){
+			//Calcular o valor da barra
+			var valor = (100 / audio.duration) * audio.currentTime;
+
+			//Adicionar valor a barra
+			barra.value = valor;
+		});
+	</script>
+
+</body>
+</html>
