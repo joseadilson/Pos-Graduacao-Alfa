@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab');
+
+h1 {
+    font: 2em Open Sans,Tahoma ;
+    color: #F00;
+    text-shadow: 2px 5px 10px #000;
+}
+
+p {
+    font: 0.8em 'Open Sans', Tahoma;
+    color: #333;
+}
+
+#box, .box {
+    width: 200px;
+    height: 200px;
+    background: #ccc;
+}
+
+.box {
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 10px #000;
+    margin-top: 10px;
+    background: radial-gradient(#FF0, pink);
+}
+
+body {
+    background: linear-gradient(to top, red,black);
+}
+
+.img {
+    width: 300px;
+    margin-top: 10px;
+    -webkit-filter: opacity(50%);
+    filter: opacity(50%);
+    transition: all 1s;
+}
+
+.img:hover {
+    -webkit-filter: opacity(100%);
+    filter:opacity(100%);
+    transform: scale(2);
+}
+
+.imgDisco {
+    width: 200px;
+    transition: all 0.5s;
+}
+
+.imgDisco:hover {
+    transform: rotate(360deg);
+}
