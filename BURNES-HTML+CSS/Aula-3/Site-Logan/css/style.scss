@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans');
+
+$texto: "Open Sans", Tahoma, Verdana;
+$titulo: "Fjalla One", Arial; 
+
+$cor1:#000;
+$cor2:#F00;
+$cor3:#CCC;
+$cor4:#FFF;
+
+$transicao: all 0.5s;
+
+@mixin texto() {
+    font: 1.2em $texto;
+    color: $cor4;
+}
+
+/*-----TAGS-----*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: $cor1;
+    width: 100%;
+    padding: 10px; //Margin interna
+    box-sizing: border-box; //Ate o tamanho da borda nao cria barra
+    & nav {
+        float: right;
+        margin-top: 14px;
+
+         & ul li {//Deixa ul e li um ao lado do outro
+            display: inline;
+            list-style: nome;
+            
+            & a {
+                @include texto();
+                transition: $transicao;
+                text-decoration: nome;
+                text-transform: uppercase;
+                margin-left: 13px;
+
+                &:hover{
+                    color: $cor2;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*-----CLASSES-----*/
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+.texto {
+    position: absolute;
+    top: 200px;
+    color: $cor4;
+    font-family: $titulo;
+    left: 30px;
+    text-shadow: 2px 2px 2px $cor1;//Sobra no Texto
+    & p {
+        font-size: 1.4em;
+    }
+
+    & h1 {
+        font-size: 3em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    & .btn {
+        border: 1px solid $cor4;
+        padding: 5px;
+        transition: $transicao;
+        text-shadow: 0 0 0 transparent;
+        color: $cor4;
+        text-decoration: none;
+        &:hover{
+            background: $cor4;
+            color: $cor1;
+        }
+    }
+}
+
+.container {
+    width: 1000px;
+    margin: auto;//Para conteudo centralizado
+    & h1 {
+        font: 3em $titulo;
+        margin: 50px 0px 20px 0px;//TOP RIGHT BOTTOM LEFT - para margin e padding
+    }
+
+    & h2 {
+        font: 2em $titulo;
+        color: $cor3;
+        margin-bottom:  20px;
+    }
+
+    & p{
+        font: 1.2em $texto;
+        text-align: justify;
+        margin: 10px 0px;
+    }
+}
+
+.img {
+    width: 100%;
+    background: $cor4;
+    padding: 10px;
+    box-shadow: 2px 2px 2px $cor3;
+    transform: rotate(-1deg);
+}
+
+/*-----IDS-----*/
+#banner {
+    widows: 100%;
+    & img {
+        width: 100%;
+    }
+}
+
+/*-----MEDIA QUERIES-----*/
+

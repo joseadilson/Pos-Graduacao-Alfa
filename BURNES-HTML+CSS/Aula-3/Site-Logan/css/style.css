@@ -1,3 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans");
+/*-----TAGS-----*/
+* {
+  margin: 0;
+  padding: 0; }
 
+header {
+  background: #000;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box; }
+  header nav {
+    float: right;
+    margin-top: 14px; }
+    header nav ul li {
+      display: inline;
+      list-style: nome; }
+      header nav ul li a {
+        font: 1.2em "Open Sans", Tahoma, Verdana;
+        color: #FFF;
+        transition: all 0.5s;
+        text-decoration: nome;
+        text-transform: uppercase;
+        margin-left: 13px; }
+        header nav ul li a:hover {
+          color: #F00;
+          text-decoration: none; }
+
+/*-----CLASSES-----*/
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.center {
+  text-align: center; }
+
+.clear {
+  clear: both; }
+
+.texto {
+  position: absolute;
+  top: 200px;
+  color: #FFF;
+  font-family: "Fjalla One", Arial;
+  left: 30px;
+  text-shadow: 2px 2px 2px #000; }
+  .texto p {
+    font-size: 1.4em; }
+  .texto h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: 10px; }
+  .texto .btn {
+    border: 1px solid #FFF;
+    padding: 5px;
+    transition: all 0.5s;
+    text-shadow: 0 0 0 transparent;
+    color: #FFF;
+    text-decoration: none; }
+    .texto .btn:hover {
+      background: #FFF;
+      color: #000; }
+
+.container {
+  width: 1000px;
+  margin: auto; }
+  .container h1 {
+    font: 3em "Fjalla One", Arial;
+    margin: 50px 0px 20px 0px; }
+  .container h2 {
+    font: 2em "Fjalla One", Arial;
+    color: #CCC;
+    margin-bottom: 20px; }
+  .container p {
+    font: 1.2em "Open Sans", Tahoma, Verdana;
+    text-align: justify;
+    margin: 10px 0px; }
+
+.img {
+  width: 100%;
+  background: #FFF;
+  padding: 10px;
+  box-shadow: 2px 2px 2px #CCC;
+  transform: rotate(-1deg); }
+
+/*-----IDS-----*/
+#banner {
+  widows: 100%; }
+  #banner img {
+    width: 100%; }
+
+/*-----MEDIA QUERIES-----*/
 
 /*# sourceMappingURL=style.css.map */
