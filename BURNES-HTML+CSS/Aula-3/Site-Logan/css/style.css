@@ -139,6 +139,15 @@ header {
     #filmes img:hover {
       filter: sepia(0%); }
 
+#img-origins {
+  margin-top: 7px;
+  margin-bottom: 25px; }
+  #img-origins h2 {
+    color: #000; }
+
+#img-logan {
+  margin-top: 22px; }
+
 footer {
   width: 100%;
   background: #000;
