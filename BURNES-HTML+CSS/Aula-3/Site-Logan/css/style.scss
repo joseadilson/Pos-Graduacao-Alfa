@@ -132,6 +132,10 @@ header {
         text-align: justify;
         margin: 10px 0px;
     }
+
+    & .h2-filmes {
+        color: $cor1;
+    }
 }
 
 .img {
@@ -140,6 +144,14 @@ header {
     padding: 10px;
     box-shadow: 2px 2px 2px $cor3;
     transform: rotate(-1deg);
+}
+
+.c-origins{
+    margin-bottom: 30px;
+}
+
+.c-imortal{
+    margin-bottom: 28px;
 }
 
 .col1 {
