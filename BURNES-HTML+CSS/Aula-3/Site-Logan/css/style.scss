@@ -19,6 +19,15 @@ $transicao: all 0.5s;
 * {
     margin: 0;
     padding: 0;
+    border: 0;
+}
+
+body {
+    background:linear-gradient(to top, $cor4, $cor3) fixed;
+}
+
+.no-cssgradients body {
+    background: #333;
 }
 
 header {
@@ -26,7 +35,10 @@ header {
     width: 100%;
     padding: 10px; //Margin interna
     box-sizing: border-box; //Ate o tamanho da borda nao cria barra
+    position: fixed;
+    z-index: 1000;
     & nav {
+        
         float: right;
         margin-top: 14px;
 
@@ -123,20 +135,160 @@ header {
 }
 
 .img {
-    width: 100%;
+    width: 90%;
     background: $cor4;
     padding: 10px;
     box-shadow: 2px 2px 2px $cor3;
     transform: rotate(-1deg);
 }
 
+.col1 {
+    width: 30%;
+}
+
+.col2 {
+    width: 70%;
+}
+
+.top {
+    padding-top: 70px;
+}
+
 /*-----IDS-----*/
+
+#menu {
+    border: 1px solid $cor4;
+    padding: 5px 10px;
+    color: $cor4;
+    font-size: 1.5em;
+    float: right; 
+    margin-top: 5px;
+    display: none;   
+}
+
 #banner {
-    widows: 100%;
+    width: 100%;
+    padding-top: 70px;
     & img {
         width: 100%;
     }
 }
 
+#filmes {
+    width: 100%;
+    background: url(../images/bg.jpg) fixed;
+    padding: 50px 0px;
+    float: left;
+
+
+    & h2 {
+        text-transform: uppercase;
+        color: $cor4;
+        margin-bottom: 20px;
+    }
+
+    & .filme {
+        width: 33%;
+        float: left;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    & img {
+        filter: sepia(80%);
+        transition: $transicao;
+        &:hover{
+            filter: sepia(0%);
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    background: $cor1;
+    padding: 20px 0px;
+    float: left;
+    & a {
+        font-size: 2.5em;
+        color: $cor4;
+        text-decoration: none;//Retirar o sublinhado
+        transition: $transicao;
+        margin-left: 15px;
+
+        &:hover{
+            color: $cor2;
+        }
+    }    
+    & p {
+         @include texto();
+    }
+
+}
+
 /*-----MEDIA QUERIES-----*/
+
+@media (max-width: 320px) {
+    #menu {
+        display: block; //Aparecer o menu
+    }
+    nav {
+           display: none;
+           background: $cor1;
+           width: 100%;
+           float: left;
+           position: relative;
+           z-index: 100;
+           & ul li {
+                display: block;
+                & a {
+                    float: left;
+                    padding: 10px;
+                    width: 100%;
+                    border-bottom: 1px solid $cor4;
+                }
+           }
+    }
+    .texto {
+        top: 80px;
+
+        & p {
+            font-size: 1em;
+        }
+
+        & h1 {
+            font-size: 1.5em;
+        }
+    }
+
+    .container {
+        width: 320px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .filme {
+        width: 100% !important;
+        & img {
+            transform:  rotate(0deg);
+        }
+    }
+
+    .col1, .col2 {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .top {
+        padding-top: 90px;
+    }
+}
+
+@media (min-width:321px) and (max-width:480px){
+
+}
+
+@media (min-width:800px){
+
+}
 
