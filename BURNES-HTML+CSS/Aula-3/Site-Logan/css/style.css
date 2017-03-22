@@ -167,6 +167,40 @@ footer {
     font: 1.2em "Open Sans", Tahoma, Verdana;
     color: #FFF; }
 
+#formulario {
+  font: 1em "Open Sans", Tahoma, Verdana;
+  width: 700px;
+  color: #FFF;
+  margin: auto;
+  background: #CCC;
+  padding: 20px 40px;
+  border: 2px solid #000;
+  margin-bottom: 10px; }
+
+#formulario-area input, #formulario-area textarea {
+  padding: 5px;
+  width: 700px;
+  font: 1em "Open Sans", Tahoma, Verdana;
+  font-size: 14px;
+  font-weight: 300;
+  color: #FFF;
+  background-color: transparent;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid #FFF;
+  border-right: 1px solid transparent;
+  margin-bottom: 20px; }
+
+#formulario-area .submit-button {
+  font: 1em "Open Sans", Tahoma, Verdana;
+  text-transform: uppercase;
+  width: 200px;
+  background-color: transparent;
+  border: 1px solid #FFF; }
+  #formulario-area .submit-button:hover {
+    color: #fff;
+    background-color: #000; }
+
 /*-----MEDIA QUERIES-----*/
 @media (max-width: 320px) {
   #menu {

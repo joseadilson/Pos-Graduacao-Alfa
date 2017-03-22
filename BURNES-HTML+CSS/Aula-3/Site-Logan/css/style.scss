@@ -242,6 +242,48 @@ footer {
 
 }
 
+#formulario {
+    font: 1.0em $texto;
+    width: 700px;
+    color:$cor4;
+    margin: auto;
+    background: $cor3;
+    padding: 20px 40px; 
+    border: 2px solid $cor1;
+    margin-bottom: 10px;
+}
+
+#formulario-area input, #formulario-area textarea {
+    padding: 5px;
+	width: 700px;
+    font: 1.0em $texto;
+    font-size:14px;
+    font-weight:300;
+    color: $cor4;
+    background-color:transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid $cor4;
+    border-right: 1px solid transparent;
+    margin-bottom:20px;
+}  
+
+#formulario-area {
+    
+    .submit-button {
+        font: 1.0em $texto;
+        text-transform:uppercase;
+        width: 200px;
+        background-color:transparent;
+        border: 1px solid $cor4;
+
+        &:hover {
+            color:#fff;
+            background-color:$cor1;
+        }
+    }
+}
+
 /*-----MEDIA QUERIES-----*/
 
 @media (max-width: 320px) {
@@ -308,4 +350,5 @@ footer {
 @media (min-width:800px){
 
 }
+
 
