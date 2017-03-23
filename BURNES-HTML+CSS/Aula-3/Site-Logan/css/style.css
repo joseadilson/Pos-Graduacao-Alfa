@@ -96,6 +96,12 @@ header {
   box-shadow: 2px 2px 2px #CCC;
   transform: rotate(-1deg); }
 
+.img-filme {
+  width: 90%;
+  background: #FFF;
+  padding: 10px;
+  box-shadow: 2px 2px 2px #CCC; }
+
 .col1 {
   width: 30%; }
 
@@ -189,7 +195,8 @@ footer {
   border-left: 1px solid transparent;
   border-bottom: 1px solid #FFF;
   border-right: 1px solid transparent;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  outline-color: #000; }
 
 #formulario-area .submit-button {
   font: 1em "Open Sans", Tahoma, Verdana;
