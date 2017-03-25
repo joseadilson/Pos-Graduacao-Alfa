@@ -342,10 +342,48 @@ footer {
         }
     }
 
+    .col1, .col2 {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+
+        /*.c-origins  {
+            background: $cor2;
+            margin-top: -800px;
+        }
+
+        .c-imortal {
+            margin-top: 350px;
+        }
+
+        .c-logan {
+            margin-top: 350px;
+        }
+
+        #img-imortal {
+            margin-bottom: 1000px;
+        }*/
+
+    }
+
     .top {
         padding-top: 90px;
     }
 
+
+    #formulario {
+        //background: $cor2;
+        width: 260px;
+        padding: 10px;
+
+        & #formulario-area input, #formulario-area textarea {
+            width: 250px;            
+        }
+
+        .submit-button {
+            margin-left: 5px;                
+        }
+    }
 }
 
 
