@@ -245,21 +245,7 @@ footer {
     .filme img {
       transform: rotate(0deg); }
 
-  .col1, .col2 {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box; }
-
   .top {
-    padding-top: 90px; }
-
-  #img-imortal {
-    margin-top: 1500px; }
-
-  #img-logan {
-    margin-top: 1500px; }
-
-  .c-origins {
-    margin-top: -3780px; } }
+    padding-top: 90px; } }
 
 /*# sourceMappingURL=style.css.map */
