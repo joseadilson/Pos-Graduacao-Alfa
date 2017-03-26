@@ -270,12 +270,13 @@ footer {
     padding-top: 90px; }
 
   #formulario {
-    width: 260px;
-    padding: 10px; }
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; }
     #formulario #formulario-area input, #formulario #formulario-area textarea {
-      width: 250px; }
-    #formulario .submit-button {
-      margin-left: 5px; } }
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box; } }
 @media (min-width: 321px) and (max-width: 480px) {
   #menu {
     display: block; }
@@ -300,6 +301,28 @@ footer {
     .texto p {
       font-size: 1em; }
     .texto h2 {
-      font-size: 1.5em; } }
+      font-size: 1.5em; }
+
+  .container {
+    width: 480px;
+    padding: 10px;
+    box-sizing: border-box; }
+
+  .col1, .col2 {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; }
+
+  .top {
+    padding-top: 70px; }
+
+  #formulario {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; }
+    #formulario #formulario-area input, #formulario #formulario-area textarea {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box; } }
 
 /*# sourceMappingURL=style.css.map */

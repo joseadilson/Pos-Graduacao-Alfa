@@ -371,16 +371,14 @@ footer {
     }
 
     #formulario {
-        //background: $cor2;
-        width: 260px;
+        width: 100%;
         padding: 10px;
+        box-sizing: border-box;
 
         & #formulario-area input, #formulario-area textarea {
-            width: 250px;            
-        }
-
-        .submit-button {
-            margin-left: 5px;                
+            width: 100%;           
+            padding: 10px;
+            box-sizing: border-box;      
         }
     }
 }
@@ -421,6 +419,34 @@ footer {
         & h2 {
             font-size: 1.5em;
         }        
+    }
+
+    .container {
+        width: 480px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .col1, .col2 {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .top {
+        padding-top: 70px;
+    }
+
+    #formulario {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+
+        & #formulario-area input, #formulario-area textarea {
+            width: 100%;           
+            padding: 10px;
+            box-sizing: border-box;
+        }
     }
 }
 
