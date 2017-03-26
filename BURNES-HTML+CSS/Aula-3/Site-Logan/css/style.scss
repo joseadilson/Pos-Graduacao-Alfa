@@ -370,7 +370,6 @@ footer {
         padding-top: 90px;
     }
 
-
     #formulario {
         //background: $cor2;
         width: 260px;
@@ -389,6 +388,40 @@ footer {
 
 @media (min-width:321px) and (max-width:480px){
 
+    #menu {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        background: $cor1;
+        width: 100%;
+        float: left;
+        position: relative;
+        z-index: 1000;
+
+        & ul li {     
+            display: block;
+            & a {
+                float: left;
+                padding: 10px 0px;;
+                width: 100%;               
+                border-bottom: 1px solid $cor4;              
+            }
+        }
+    }   
+
+    .texto {
+        top: 80px;
+
+        & p {
+            font-size: 1em;
+        }
+
+        & h2 {
+            font-size: 1.5em;
+        }        
+    }
 }
 
 @media (min-width:800px){

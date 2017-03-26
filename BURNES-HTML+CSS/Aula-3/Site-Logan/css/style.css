@@ -276,5 +276,30 @@ footer {
       width: 250px; }
     #formulario .submit-button {
       margin-left: 5px; } }
+@media (min-width: 321px) and (max-width: 480px) {
+  #menu {
+    display: block; }
+
+  nav {
+    display: none;
+    background: #000;
+    width: 100%;
+    float: left;
+    position: relative;
+    z-index: 1000; }
+    nav ul li {
+      display: block; }
+      nav ul li a {
+        float: left;
+        padding: 10px 0px;
+        width: 100%;
+        border-bottom: 1px solid #FFF; }
+
+  .texto {
+    top: 80px; }
+    .texto p {
+      font-size: 1em; }
+    .texto h2 {
+      font-size: 1.5em; } }
 
 /*# sourceMappingURL=style.css.map */
