@@ -324,5 +324,35 @@ footer {
       width: 100%;
       padding: 10px;
       box-sizing: border-box; } }
+@media (min-width: 800px) {
+  #menu {
+    display: block; }
+
+  nav {
+    display: none;
+    width: 100%;
+    float: left;
+    position: relative;
+    z-index: 1000; }
+    nav ul li {
+      display: block; }
+      nav ul li a {
+        width: 100%;
+        float: left;
+        padding: 10px;
+        border-bottom: 1px solid #FFF;
+        text-decoration: none; }
+
+  .texto {
+    top: 100px; }
+    .texto p {
+      font-size: 2em; }
+    .texto h1 {
+      font-size: 5em; }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; } }
 
 /*# sourceMappingURL=style.css.map */
