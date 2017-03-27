@@ -313,6 +313,7 @@ footer {
                     padding: 10px;
                     width: 100%;
                     border-bottom: 1px solid $cor4;
+                    text-decoration: none;
                 }
            }
     }
@@ -332,13 +333,16 @@ footer {
         width: 320px;
         padding: 10px;
         box-sizing: border-box;
+
+        & img{
+            margin-left: 3px;
+        }        
     }
 
     .filme {
         width: 100% !important;
         & img {
             transform:  rotate(0deg);
-
         }
     }
 
@@ -405,6 +409,7 @@ footer {
                 padding: 10px 0px;;
                 width: 100%;               
                 border-bottom: 1px solid $cor4;              
+                text-decoration: none;
             }
         }
     }   
@@ -425,7 +430,18 @@ footer {
         width: 480px;
         padding: 10px;
         box-sizing: border-box;
+        
+        & img{
+            margin-left: 12px;
+        }
     }
+
+    .filme {
+        width: 100% !important;
+        & img {
+            transform:  rotate(0deg);
+        }
+    }    
 
     .col1, .col2 {
         width: 100%;
@@ -492,6 +508,45 @@ footer {
         width: 100%;
         padding: 10px;
         box-sizing: border-box;
+
+        & img{
+            margin-left: 25px;
+        }
+    }
+
+    .filme {
+        width: 100% !important;
+        & img {
+            transform:  rotate(0deg);
+        }
+    }       
+
+    .col1, .col2 {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .top {
+        padding-top: 80px;
+    }
+
+    #formulario {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+
+        & #formulario-area input, #formulario-area textarea {
+            width: 100%;           
+            padding: 10px;
+            box-sizing: border-box;      
+        }
+    }
+
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
     }
 
 }
