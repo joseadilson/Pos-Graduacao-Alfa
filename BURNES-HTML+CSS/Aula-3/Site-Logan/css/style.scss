@@ -351,23 +351,6 @@ footer {
         padding: 10px;
         box-sizing: border-box;
 
-        /*.c-origins  {
-            background: $cor2;
-            margin-top: -800px;
-        }
-
-        .c-imortal {
-            margin-top: 350px;
-        }
-
-        .c-logan {
-            margin-top: 350px;
-        }
-
-        #img-imortal {
-            margin-bottom: 1000px;
-        }*/
-
     }
 
     .top {
@@ -466,7 +449,7 @@ footer {
     }
 }
 
-@media (min-width:800px){
+@media (min-width:481px) and (max-width:800px){
 
     #menu {
         display: block;
