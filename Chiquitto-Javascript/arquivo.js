@@ -156,10 +156,31 @@ function iniciar() {
     var formulario = document.getElementById('formulario');
 
     formulario.addEventListener('submit', botaoClicado);
+
+    document.addEventListener('mousemove', movimento);
 }
 
-function botaoClicado(){
+function movimento(evento){
+//    console.log(evento);
+
+    var s = evento.clientX + ' x ' +evento.clientY;
+//    console.log(s);
+
+    document.getElementById('idade').value = s;
+}
+
+function botaoClicado(evento){
+    //console.log(evento);
+
+    //evento.preventDefault();
+
     var campo = document.getElementById('idade');
 
-    console.log(campo.value);
+    var idade = campo.value;
+    idade = parseInt(idade);
+
+    if (idade < 18) {
+        window.alert('Idade deve ser maior que 18 anos');
+        evento.preventDefault();
+    }
 }
