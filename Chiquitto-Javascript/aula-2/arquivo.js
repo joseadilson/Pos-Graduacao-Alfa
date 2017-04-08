@@ -74,21 +74,28 @@ p2.then((result) => {
 });
 */
 
+/*
 //Nome, email, cpf, idade, genero
 let p = new Promise((resolve, reject) => {
     mostrarLoading();
 
-    reject(1);
+    resolve(1);
 })
 .then(validarNome)
 .then(validarEmail)
 .then(validarCPF)
 .then(validarIdade)
 .then(validarGenero)
-.catch(tratarReject);
+.catch(tratarReject)
+.then(esconderLoading)
+;
 
 function mostrarLoading() {
     console.log('Mostrar Loading');
+}
+
+function esconderLoading() {
+    console.log('Esconder Loading');
 }
 
 function validarNome(result){
@@ -132,3 +139,4 @@ function validarGenero(result){
 function tratarReject(reason){
     console.log(reason);
 }
+*/
