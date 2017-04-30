@@ -5,52 +5,55 @@ window.onload = () => {
 }
 
 function iniciarProjeto() {
-    let p = new Promise((resolve, reject) => {
-        mostrarLoading();
-        resolve({});
-    })
-    .then((result) => {
-        
-    })
+    Promise.resolve(null)
     .then(obterValorGasolina)
     .then(obterValorAlcool)
     .then(converterValores)
-    .then(calcularPreco)
-
-    .then(esconderLoading)
+    .then(validarCampos)
+    .then(calcularValores)
+    .catch((reason) => {
+        window.alert(reason);
+    })
     ;
 }
 
-function mostrarLoading() {
-    console.log('Mostrar loading');
+function obterValorGasolina() {
+    let campoGasolina = document.getElementById('gasolina');
+    
+    return campoGasolina.value;
 }
 
-function esconderLoading() {
-    console.log('Esconder loading');
-}
-
-function obterValorGasolina(result) {
-    let campo = document.getElementById('gasolina');
-    result.valorGasolina = campo.value;
-    return result;
-}
 
 function obterValorAlcool(result) {
-    let campo = document.getElementById('alcool');
-    result.valorAlcool = campo.value;
-    return result;
+    let campos      = {};
+    let campoAlcool = document.getElementById('alcool');
+    campos.gasolina = result;
+    campos.alcool   = campoAlcool.value;
+
+    return campos;
 }
 
-function converterValores(result) {
-    result.valorGasolina = parseFloat(result.valorGasolina);
-    result.valorAlcool   = parseFloat(result.valorAlcool);
+function converterValores(campos){
+    campos.alcool   = parseFloat(campos.alcool);
+    campos.gasolina = parseFloat(campos.gasolina);
 
-    return result;
+    return campos;
 }
 
-function calcularPreco(result) {
-    result.resultado = result.valorAlcool / result.valorGasolina;
+function validarCampos(campos) {
+    if (isNaN(campos.alcool) || isNaN(campos.gasolina)) {
+        return Promise.reject('Valores inválidos, somente numeros!');
+    }
 
-    console.log(result.resultado);
+    return campos;
 }
 
+function calcularValores(campos){
+    let resultado = campos.alcool / campos.gasolina;
+
+    if (resultado > 0.70) {
+        window.alert('Gasolina e mais vantajoso.')
+    } else {
+        window.alert('Alcool e mais vantajoso');
+    }
+}
