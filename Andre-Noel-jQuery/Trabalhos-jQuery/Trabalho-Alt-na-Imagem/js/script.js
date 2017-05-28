@@ -1,6 +1,9 @@
 (function($) {
     $.fn.altImageIndex = function() {
-        $(this).after('<br>'+ $(this).attr("alt"));
+        this.each(function(){
+            $(this).after('<br>'+ $(this).attr("alt")); 
+        });
+        return this;
     };
 })(jQuery);
 
