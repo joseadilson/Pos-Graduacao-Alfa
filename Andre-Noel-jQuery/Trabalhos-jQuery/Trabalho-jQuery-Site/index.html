@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Trabalho JQuery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/owl.carousel.css" />
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css" />
+
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.js"></script>
+	    <script type="text/javascript" src="js/inputmask.js"></script>
+	    <script type="text/javascript" src="js/jquery.inputmask.js"></script>
+	    <script type="text/javascript" src="js/inputmask.extensions.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/validate.min.js"></script>
+        <script type="text/javascript" src="json/estados-cidades.json"></script>
+   
+        <style>
+            body{margin: 50px auto}
+        </style>
+
+        <script>
+
+            $(document).ready(function() {
+                $("#owl-demo").owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    marge: true,
+                    nav: true,
+                    items : 2,
+                    responsiveClass:true,
+                    autoplay:true,
+                    autoplayTimeout:4000,
+                    //center: true,
+                });
+            });
+
+            $(document).ready(function() {
+                $("#owl-demo2").owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    marge: true,
+                    nav: true,
+                    items : 6,
+                    responsiveClass:true,
+                    autoplay:true,
+                    autoplayTimeout:4000,
+                    //center: true,
+                });
+            });
+
+            /*Botão voltar aotopo*/
+            $('#voltarTopo').fadeOut();
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $('#voltarTopo').fadeIn();
+                    } else {
+                        $('#voltarTopo').fadeOut();
+                    }
+                });
+
+            $('#voltarTopo').click(function () {
+                $('html, body').animate({scrollTop: 0}, 50);
+                return false;
+            });
+
+            $(document).ready(function(){
+                //$("#dataNascimento").inputmask("99/99/9999");
+                $("#phone").inputmask("(99)9999[9]-9999");                
+            });
+
+
+            /*calendário na data*/
+            $(function(){
+                $("#dtNascimento").datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                });
+                
+            });
+
+            /*json-estado-cidade*/            
+            $.ajax({
+                url: "json/estados-cidades.json",
+                dataType: "json",
+                type: "GET"
+            }).done(function (data) {
+                var html = '';
+                for (var i in data.estados) {
+                    html += '<option value=' + i + '>' + data.estados[i].nome + '</option>';
+                }
+                $("#estado").append(html);
+            });
+
+            $("#estado").click(function () {
+                var estado = $(this).val();
+                $.ajax({
+                    url: "json/estados-cidades.json",
+                    dataType: "json",
+                    data: {estado: estado},
+                    type: "GET"
+                }).done(function (data) {
+                    var html = '';
+                    for (var i in data.estados[estados].cidades) {
+                        html += '<option value=' + i + '>' + data.estados[estados].cidades[i] + '</option>';
+                    }
+                    $("#cidade").html(html);
+                });
+            });
+
+        </script>
+  
+    </head>
+    <body>
+
+        <section id="home">
+
+            <div id="nav">
+                <ul>
+                    <li>
+                        <a href="#home">Página Inicial</a>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Produtos</a>
+                        <div class="dropdown-content">
+                        <a href="#">Perecíveis</a>
+                        <a href="#">Não-perecíveis</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#register">Cadastrar</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Quem somos</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Contato</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div id="owl-demo" class="owl-carousel owl-theme">
+                <div class="item"> <img src="imagem/comida1.jpg" alt="Foto 1"></div>
+                <div class="item"> <img src="imagem/comida2.jpg" alt="Foto 2"></div>
+                <div class="item"> <img src="imagem/comida3.jpg" alt="Foto 3"></div>
+                <div class="item"> <img src="imagem/comida4.jpg" alt="Foto 4"></div>
+                <div class="item"> <img src="imagem/comida5.jpg" alt="Foto 5"></div>
+                <div class="item"> <img src="imagem/comida6.jpg" alt="Foto 6"></div>
+            </div>
+            
+        </section>
+
+        <section id="register">
+            <main class="container top">    
+            <h1 class="center">ENTRE EM CONTATO</h1>  
+            <div id="formulario">   
+                <div id="formulario-area">                        
+                    <form id="form_contato" class="form">
+                        
+                        <input type="text"  id="nome" placeholder="Nome" />
+
+                        <input type="email"  id="email" placeholder="Email" required/>
+
+                        <input type="text" id="phone" placeholder="Telefone" required/>
+
+                        <input type="text" id="dtNascimento" placeholder="Data Nascimento"/>
+
+                        <select id="estado"><option>Estado</option></select>  
+
+                        <select id="cidade"><option>Cidade</option></select>                     
+
+                        <input type="submit" name="submit" value="Enviar" class="submit-button"/>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+        <div id="owl-demo2" class="owl-carousel owl-theme">
+            <div class="item"> <img src="imagem/comida7.jpg" alt="Foto 1"></div>
+            <div class="item"> <img src="imagem/comida8.jpg" alt="Foto 2"></div>
+            <div class="item"> <img src="imagem/comida9.jpg" alt="Foto 3"></div>
+            <div class="item"> <img src="imagem/comida10.jpg" alt="Foto 4"></div>
+            <div class="item"> <img src="imagem/comida11.jpg" alt="Foto 5"></div>
+            <div class="item"> <img src="imagem/comida12.jpg" alt="Foto 6"></div>
+        </div>        
+
+        </section>
+        
+        <a id="voltarTopo" href="#">Topo</a>
+        
+    </body>
+</html>
