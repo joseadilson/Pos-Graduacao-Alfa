@@ -46,12 +46,101 @@
                     <img src="imgs/logo.png" alt="">                
                 </div>
                 <div class="col-md-9 col-sm-9 col-xs-6 text-right">
-                    000000000000000               
+                
+                    <i class="fa fa-phone"></i> 2222222222
+
+                    <a href="http://facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>     
+
+                    <a href="http://twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+
+                    <a href="http://instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a> 
                 </div>
             </div>
         </div>
     
     </header>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                </button>                
+            </div>   
+
+            <div id="menu" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.php">Home</a>
+                    </li>
+                    <li>
+                        <a href="sobre">Sobre</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Veiculos</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="nacionais">Nacionais</a>                            
+                            </li>
+                            <li>
+                                <a href="importados">Importados</a>                            
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contato">Contato</a>
+                    </li>
+                </ul>  
+
+                <form name="form1" class="navbar-form navbar-right">
+                    <div class="input-group">
+                        <input type="text" name="" value=""placeholder="Buscar..." class="form-control">
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-default">
+                                <i class="fa fa-search"></i>
+                            </button>                            
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+        </div>        
+    </nav>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="cal-md-9 col-sm-9">
+                    <p><?php echo date("Y"); ?> Desenvolvido por José Adilson - Todos os direitos reservados</p>                
+                </div>
+
+                <div class="col-md-3 col-sm-3 text-right">
+                    
+                    <i class="fa fa-phone"></i> 2222222222
+
+                    <a href="http://facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>     
+
+                    <a href="http://twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+
+                    <a href="http://instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a> 
+                </div>
+            </div>
+        </div>
+    </footer>
     
     </body>
 </html>
