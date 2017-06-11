@@ -21,6 +21,10 @@
         <meta name="twitter:image" content="http://pos.professorburnes.com.br/carsale2/img/carsale.jpgs">
         <meta name="twitter:title" content="Car Sale">
 
+    
+        <!-- url base -->
+        <base href="http://localhost/Burnes-bootstrap/carsale-pos/" target="">
+
         <!-- javascript -->
         <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -32,8 +36,6 @@
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="icon" type="image/png" href="imgs/icone.png">
-
-
 
     </head>
     <body>
@@ -101,7 +103,7 @@
                 </ul>  
 
                 <form name="form1" class="navbar-form navbar-right">
-                    <div class="input-group">
+                    <div class="input-group input-group-lg">
                         <input type="text" name="" value=""placeholder="Buscar..." class="form-control">
                         <div class="input-group-btn">
                             <button type="submit" class="btn btn-default">
@@ -114,6 +116,40 @@
             </div>
         </div>        
     </nav>
+
+    <div class="banner hidden-xs hidden-ms">
+        
+    </div>
+
+    <main class="container">
+        <?php 
+
+            //print_r($_GET);
+
+            if (isset ($_GET["p"])) {
+                //se o parametro p existir
+                $p = trim($_GET["p"]);
+
+                //Separar por / produto/111
+                //pagina - produto
+                //codigo - 111
+                $p = explode("/", $p);
+
+                $pagina = $p[0];//Nome da pagina
+
+            } else {
+                $pagina = "home";
+            }
+
+            $pagina = "pages/$pagina.php";
+
+            if (file_exists($pagina)) 
+                include $pagina;
+            else
+                include "pages/erro.php";
+
+        ?>
+    </main>
 
     <footer>
         <div class="container">
