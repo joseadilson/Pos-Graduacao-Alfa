@@ -12,8 +12,11 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
 
 	<style type="text/css">
-		td img {
+		td img, .row img {
 			width: 150px;
+		}
+		.thumbnail {
+			height: 200px;
 		}
 	</style>
 
@@ -109,6 +112,12 @@
 			</tbody>
 		</table>
 
+		<h1>Carregando em Grid</h1>
+
+		<div class="row">
+
+		</div>
+
 	</div>
 
 	<script type="text/javascript">
@@ -125,15 +134,31 @@
 
 					$("#produtos").append(tabela);
 
+					grid = "<div class='col-md-6 text-center'><div class='thumbnail'>"+val.imagem+"<p>"+val.nome+"</p></div></div>";
+					$(".row").append(grid);
+
+
 				})
+
+				tabelar();
 
 			}).fail(function(){
 				$("#msg").html("Erro ao carregar dados!");
 			});
 
-            function tabelar() {
-                $("#tabela1, #tabela2").dataTable();
-            }
+
+			function tabelar() {
+				$("#tabela1,#tabela2").dataTable({
+					"language": {
+						"lengthMenu":"Mostrando _MENU_ registros por página",
+						"zeroRecords": "Nenhum registro encontrado",
+						"info": "Mostrando página _PAGE_ de _PAGES_",
+						"infoEmpty": "Nenhum registro encontrado",
+						"infoFiltered": "Filtrando de _MAX_ total de registros",
+						"search":"Busca: "
+					}
+				});
+			}
 		})
 	</script>
 </body>
