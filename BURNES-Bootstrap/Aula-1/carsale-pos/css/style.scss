@@ -4,12 +4,14 @@ $claro : #CCC;
 $rscuro : #333;
 $red : #F00;
 
+
 .banner {
     width: 100%;
     height: 500px;
     background: url(../imgs/2.jpg) center;
     background-size: cover;
-    float: left;
+    float: left;margin-top: -25px;
+
 }
 
 .navbar {
@@ -24,5 +26,18 @@ $red : #F00;
         &:last-child {
             border-right: 1px solid #CCC;
         }
+        a {
+            font: 1.5em $texto ;
+        }
     }
+}
+
+h1,h2, h3 {
+    font-family: $titulo;
+    color: $red;
+}
+
+p {
+    font: 1em $texto;
+    color: $escuro;
 }
