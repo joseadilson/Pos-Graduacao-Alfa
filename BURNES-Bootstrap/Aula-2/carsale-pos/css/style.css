@@ -56,4 +56,21 @@ footer {
     footer a:hover {
       color: #F00; }
 
+.row .thumbnail {
+  border-radius: 0; }
+  .row .thumbnail p {
+    height: 100px; }
+  .row .thumbnail .text-center {
+    height: 40px; }
+
+.btn {
+  border-radius: 0; }
+
+#sobre {
+  background: #F1F1F1;
+  padding: 20px 0px; }
+
+.row img, .img {
+  width: 100%; }
+
 /*# sourceMappingURL=style.css.map */

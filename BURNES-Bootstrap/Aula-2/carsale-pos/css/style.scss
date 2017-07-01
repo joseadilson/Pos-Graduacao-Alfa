@@ -1,6 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat|Roboto';
 
 $claro : #CCC;
+$clarinho: #F1F1F1;
 $escuro : #333;
 $red : #F00;
 
@@ -85,4 +86,29 @@ footer {
             color: $red;
         }
     }
+}
+
+.row .thumbnail {
+    border-radius: 0;
+
+    p {
+        height: 100px;
+    }
+
+    .text-center {
+        height: 40px;
+    }
+}
+
+.btn {
+    border-radius: 0;
+}
+
+#sobre {
+    background: $clarinho;
+    padding: 20px 0px;
+}
+
+.row img, .img {
+    width: 100%;
 }
