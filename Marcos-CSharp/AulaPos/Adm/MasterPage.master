@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -22,6 +23,8 @@
 
         <asp:HyperLink ID="linkUsuario" runat="server"
             NavigateUrl="~/Adm/Usuario.aspx">Usuário</asp:HyperLink>
+
+        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Sair</asp:LinkButton>
 
         <br /><hr /><br />
 
